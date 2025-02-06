@@ -1,29 +1,37 @@
+   
     const Article = document.querySelector('.Article')
     const text = document.querySelector('.text')
 
+    const ArticleBtnclick = document.querySelector('#ArticleBtnclick')
+    const TextBtnclick = document.querySelector('#TextBtnclick')
 
-    Btnclick1.addEventListener("click",()=>{
-        const text = document.getElementsByClassName('text')
-        const Article = document.getElementsByClassName('Article')
+
+    TextBtnclick.addEventListener("click",()=>{
+       
+
 
 
         // text.classList.toggle('active')
-        if(text.classList.contains("text"))
+        if(text.classList.contains("hidden"))
         {
-            // text.classList.remove("hidden");
-            text.classList.add("active");
+           
+            text.classList.remove("hidden");
             Article.classList.add("hidden");
+        }
+        
+    })
+
+    ArticleBtnclick.addEventListener("click",()=>{
+        // text.classList.toggle('active')
+        if(Article.classList.contains("hidden"))
+        {
+           
+            Article.classList.remove("hidden");
+            text.classList.add("hidden");
         }
         
     })
 
 
 
-
-    // checkbox.addEventListener("change", function () {
-    //     if (text.classList.contains('text')) {
-    //     text.style.display = "block";
-    //     } else {
-    //     text.style.display = "none";
-    //     }
-    //     });
+ 
